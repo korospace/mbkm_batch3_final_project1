@@ -16,7 +16,14 @@ router.post(
     '/api/v1/users/register',
     body('email')
         .notEmpty().withMessage("email is required")
-        .isEmail().withMessage("email is not valid"),
+        .isEmail().withMessage("email is not valid")
+        .custom(async function (value) {
+            let isExist = await UsersController.findUserByEmail(value);
+
+            if (isExist) {
+                return Promise.reject('email already in use');
+            }
+        }),
     body('password')
         .notEmpty().withMessage("password is required"),
     UsersController.userRegister
