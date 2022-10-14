@@ -1,3 +1,6 @@
+## postgre cheatsheet
+    https://github.com/korospace/psql-cheatsheet/blob/master/README.md
+
 ## database credential
     host: ec2-54-147-36-107.compute-1.amazonaws.com
     port: 5432
@@ -10,8 +13,8 @@
         id serial primary key,
         email varchar(255) unique,
         password varchar(255),
-        createdAt timestamp,
-        updatedAt timestamp
+        created_date timestamptz,
+        modified_date timestamptz
     );
 
 ## table reflections
@@ -20,6 +23,19 @@
         low_point varchar(255),
         take_away varchar(255),
         owner_id integer references users(id) on delete cascade on update cascade,
-        createdAt timestamp,
-        updatedAt timestamp
+        created_date timestamptz,
+        modified_date timestamptz
     );
+
+## git
+    - git branch new_branch_name
+    - git checkout branch_name
+
+    - git push origin branch_name
+    
+    - git pull origin master
+    - git fetch origin master\
+
+== issues ==
+- result after create reflections not yet
+- validator with puth method not yet
