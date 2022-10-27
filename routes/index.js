@@ -8,7 +8,7 @@ const ReflectionsController = require("../controllers/reflections");
 const UsersController = require("../controllers/users");
 
 router.get('/', (req,res) => {
-    res.status(200).json({message:"final project tim 3"})
+    res.status(200).json({message:"final project 1 tim 3"})
 });
 
 // User - Register
