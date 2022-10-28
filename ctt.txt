@@ -1,13 +1,14 @@
 ## postgre cheatsheet
     https://github.com/korospace/psql-cheatsheet/blob/master/README.md
 
-## database credential
+## heroku postgres credential
     host: ec2-54-147-36-107.compute-1.amazonaws.com
     port: 5432
     username: xegiidcmedfazi
     database: d2jmb5m8fsud5f
     password: c033081de4cc9fe453dbedacc48516c965411d7651f011df11ae37904a1d865a
 
+## login heroku postgre terminal
     psql -h ec2-54-147-36-107.compute-1.amazonaws.com -U xegiidcmedfazi -d d2jmb5m8fsud5f -p 5432
 
 ## table users
@@ -28,16 +29,3 @@
         created_date timestamptz,
         modified_date timestamptz
     );
-
-## git
-    - git branch new_branch_name
-    - git checkout branch_name
-
-    - git push origin branch_name
-    
-    - git pull origin master
-    - git fetch origin master\
-
-== issues ==
-- result after create reflections not yet
-- validator with puth method not yet
